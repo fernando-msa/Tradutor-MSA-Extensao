@@ -1,0 +1,17 @@
+Esta extensão é uma ferramenta de tradução simples que utiliza a API pública do MyMemory. Não requer criação de conta, login ou configuração de chaves de API para ser utilizada.
+
+Instruções para teste:
+1. Clique no ícone da extensão na barra de ferramentas do navegador para abrir o popup.
+2. Na área de texto superior ("Texto original"), digite ou cole uma frase para teste (ex: "Hello world").
+3. Certifique-se de que os idiomas de origem e destino estão selecionados corretamente (o padrão é "Autodetect" para "Português").
+4. Clique no botão "Traduzir" ou pressione "Ctrl+Enter".
+5. O resultado da tradução aparecerá na área de texto inferior ("Tradução").
+
+Funcionalidades adicionais para verificar:
+- Detecção automática de idioma (selecione "Autodetect" na origem).
+- Inversão de idiomas: Clique no botão de setas entre os seletores de idioma para trocar a origem com o destino.
+- Validação: Tentar traduzir sem texto deve não realizar ação ou mostrar comportamento padrão.
+
+Observações:
+- A extensão necessita de conexão com a internet para acessar a API de tradução (api.mymemory.translated.net).
+- Nenhuma informação pessoal do usuário é coletada ou armazenada.

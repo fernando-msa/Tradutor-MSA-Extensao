@@ -4,47 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tradutor</title>
+  <title>Tradutor MSA Extensão</title>
   <link rel="stylesheet" href="popup.css">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>Tradutor Rápido</h1>
-    </div>
+  <div class="app-container">
+    <header>
+      <div class="logo-area">
+        <h1>Tradutor MSA</h1>
+      </div>
+      <nav class="tabs">
+        <button class="tab-btn active" data-tab="translator">
+          <span class="material-icons">translate</span> Tradutor
+        </button>
+        <button class="tab-btn" data-tab="history">
+          <span class="material-icons">history</span> Histórico
+        </button>
+      </nav>
+    </header>
 
-    <div class="language-controls">
-      <select id="sourceLang">
-        <option value="autodetect">Detectar Idioma</option>
-        <option value="pt-BR">Português</option>
-        <option value="en-US">Inglês</option>
-        <option value="es-ES">Espanhol</option>
-        <option value="fr-FR">Francês</option>
-        <option value="de-DE">Alemão</option>
-        <option value="it-IT">Italiano</option>
-      </select>
-      <button id="swapParams" title="Inverter Idiomas">⇄</button>
-      <select id="targetLang">
-        <option value="en-US" selected>Inglês</option>
-        <option value="pt-BR">Português</option>
-        <option value="es-ES">Espanhol</option>
-        <option value="fr-FR">Francês</option>
-        <option value="de-DE">Alemão</option>
-        <option value="it-IT">Italiano</option>
-      </select>
-    </div>
+    <main id="translator-view" class="view active">
+      <div class="language-selector">
+        <div class="select-group">
+          <select id="sourceLang"></select>
+        </div>
+        <button id="swapLanguages" class="icon-btn" title="Inverter idiomas">
+          <span class="material-icons">swap_horiz</span>
+        </button>
+        <div class="select-group">
+          <select id="targetLang"></select>
+        </div>
+      </div>
 
-    <div class="translation-area">
-      <textarea id="sourceText" placeholder="Digite o texto aqui..."></textarea>
-      <textarea id="targetText" placeholder="Tradução..." readonly></textarea>
-    </div>
+      <div class="input-area">
+        <div class="textarea-container">
+          <textarea id="sourceText" placeholder="Digite para traduzir..."></textarea>
+          <div class="tools">
+            <button id="micBtn" class="tool-btn" title="Falar">
+              <span class="material-icons">mic</span>
+            </button>
+            <button id="copySourceBtn" class="tool-btn" title="Copiar">
+              <span class="material-icons">content_copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div class="actions">
-      <button id="translateBtn">Traduzir</button>
-      <span id="statusMessage"></span>
-    </div>
+      <div class="output-area">
+        <div class="textarea-container">
+          <textarea id="targetText" readonly placeholder="Tradução..."></textarea>
+          <div class="tools">
+            <button id="speakBtn" class="tool-btn" title="Ouvir">
+              <span class="material-icons">volume_up</span>
+            </button>
+            <button id="copyTargetBtn" class="tool-btn" title="Copiar">
+              <span class="material-icons">content_copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-bar">
+        <button id="translateBtn" class="primary-btn">Traduzir</button>
+      </div>
+      <div id="statusMessage" class="status-message"></div>
+    </main>
+
+    <main id="history-view" class="view">
+      <div class="history-header">
+        <h2>Recentes</h2>
+        <button id="clearHistoryBtn" class="text-btn">Limpar Tudo</button>
+      </div>
+      <ul id="historyList" class="history-list">
+        <!-- History items will be injected here -->
+        <li class="empty-state">Nenhum histórico ainda.</li>
+      </ul>
+    </main>
   </div>
+
+  <script src="languages.js"></script>
   <script src="popup.js"></script>
 </body>
 
