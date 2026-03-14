@@ -467,7 +467,17 @@ if (rateBtn) {
   rateBtn.addEventListener('click', () => {
     if (chrome.storage && chrome.storage.local) chrome.storage.local.set({ hasReviewed: true });
     reviewBanner.style.display = 'none';
-    chrome.tabs.create({ url: 'https://microsoftedge.microsoft.com/addons/detail/tradutor-msa/' }); // Replace with actual ID
+    chrome.tabs.create({ url: 'https://microsoftedge.microsoft.com/addons/detail/tradutor-r%C3%A1pido-edge/dkojdeehfjpjphkndhagfbhknnlckami' });
+```
+
+**Pelo GitHub web:**
+1. Acesse `Tradutor-MSA-Extensao` → clique em `popup.js`
+2. Clique no ícone de lápis ✏️
+3. Use `Ctrl+F` para encontrar `tradutor-msa/`
+4. Faça a substituição
+5. Commit com a mensagem:
+```
+fix: corrige URL da review na Edge Store
   });
 }
 
