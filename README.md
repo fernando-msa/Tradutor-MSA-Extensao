@@ -7,12 +7,13 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 
-**Extensão leve e gratuita para tradução instantânea — com voz, histórico e menu de contexto. Disponível para Edge e Chrome.**
+**Extensão leve e gratuita para tradução instantânea — com voz, histórico e menu de contexto. Disponível para Edge e Chrome. Em breve no Firefox.**
 
 [![Edge Store](https://img.shields.io/badge/Microsoft%20Edge-Instalar%20Agora-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/tradutor-r%C3%A1pido-edge/dkojdeehfjpjphkndhagfbhknnlckami)
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Em%20breve-AAAAAA?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
+[![Firefox Add-ons](https://img.shields.io/badge/Firefox-Em%20revisão-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](#)
 
-![Version](https://img.shields.io/badge/versão-2.1-blue)
+![Version](https://img.shields.io/badge/versão-2.2-blue)
 ![License](https://img.shields.io/badge/licença-MIT-green)
 
 </div>
@@ -38,9 +39,18 @@
 ## 📦 Instalação
 
 ### Microsoft Edge *(disponível agora)*
-1. Acesse a [Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/detail/tradutor-r%C3%A1pido-edge/dkojdeehfjpjphknddagfbhknnlckami)
+1. Acesse a [Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/detail/tradutor-r%C3%A1pido-edge/dkojdeehfjpjphkndhagfbhknnlckami)
 2. Clique em **Obter**
 3. Confirme em **Adicionar extensão**
+
+### Firefox *(em revisão na Mozilla Add-ons Store)*
+> 🦊 A extensão foi submetida à [Firefox Add-ons Store (AMO)](https://addons.mozilla.org) e está aguardando aprovação. Disponibilizaremos o link assim que for aprovada.
+
+Enquanto isso, instale manualmente:
+1. Baixe o `.zip` na aba [Releases](https://github.com/fernando-msa/Tradutor-MSA-Extensao/releases)
+2. No Firefox, acesse `about:debugging#/runtime/this-firefox`
+3. Clique em **Carregar extensão temporária**
+4. Selecione qualquer arquivo dentro da pasta descompactada
 
 ### Chrome *(em breve na store)*
 Enquanto não está na Chrome Web Store, instale manualmente:
@@ -107,7 +117,7 @@ Tradutor-MSA-Extensao/
 ## 🧑‍💻 Desenvolvimento Local
 
 ### Pré-requisitos
-- Navegador Edge ou Chrome
+- Navegador Edge, Chrome ou Firefox
 - Nenhuma dependência externa — JavaScript puro
 
 ### Rodando localmente
@@ -116,13 +126,16 @@ Tradutor-MSA-Extensao/
 # 1. Clone o repositório
 git clone https://github.com/fernando-msa/Tradutor-MSA-Extensao.git
 
-# 2. No Edge, acesse:
-edge://extensions/
+# 2. No Edge/Chrome, acesse:
+edge://extensions/   # ou chrome://extensions/
 
 # 3. Ative o Modo do desenvolvedor
 
 # 4. Clique em "Carregar sem compactação"
 # Selecione a pasta clonada
+
+# No Firefox:
+# about:debugging#/runtime/this-firefox → Carregar extensão temporária
 ```
 
 Qualquer alteração nos arquivos é refletida ao clicar em **Atualizar** na página de extensões.
@@ -134,6 +147,7 @@ Qualquer alteração nos arquivos é refletida ao clicar em **Atualizar** na pá
 | Item | Detalhe |
 |---|---|
 | Limite da API gratuita | MyMemory limita ~5.000 palavras/dia por IP sem chave de API |
+| Voz no Firefox | Reconhecimento de voz não suportado no Firefox (Web Speech API indisponível) |
 | Voz no Chrome | Disponibilidade de vozes varia por sistema operacional |
 | Detecção automática | Textos muito curtos (1-2 palavras) podem ter detecção imprecisa |
 
@@ -141,6 +155,7 @@ Qualquer alteração nos arquivos é refletida ao clicar em **Atualizar** na pá
 
 ## 🔧 Melhorias Planejadas
 
+- [ ] Publicação na Firefox Add-ons Store *(em revisão)*
 - [ ] Publicação na Chrome Web Store
 - [ ] Suporte a chave de API MyMemory para aumentar o limite diário
 - [ ] Tradução automática ao selecionar texto (sem abrir popup)
