@@ -1,22 +1,18 @@
 # 🌐 Tradutor MSA — Extensão de Navegador
 
-<div align="center">
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/)
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
-
-**Extensão leve e gratuita para tradução instantânea — com voz, histórico e menu de contexto. Disponível para Edge e Chrome. Em breve no Firefox.**
+**Extensão leve e gratuita para tradução instantânea — com voz, histórico e menu de contexto. Disponível para Edge, Firefox e Chrome.**
 
 [![Edge Store](https://img.shields.io/badge/Microsoft%20Edge-Instalar%20Agora-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/tradutor-r%C3%A1pido-edge/dkojdeehfjpjphkndhagfbhknnlckami)
-[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Em%20breve-AAAAAA?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
-[![Firefox Add-ons](https://img.shields.io/badge/Firefox-Em%20revisão-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](#)
+[![Firefox Add-ons](https://img.shields.io/badge/Firefox-Instalar%20Agora-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](https://addons.mozilla.org/pt-BR/firefox/addon/tradutor-msa/)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Em%20breve-AAAAAA?style=for-the-badge&logo=googlechrome&logoColor=white)](#instalação)
 
-![Version](https://img.shields.io/badge/versão-2.2-blue)
-![License](https://img.shields.io/badge/licença-MIT-green)
-
-</div>
+[![Version](https://img.shields.io/badge/versão-2.2-blue)](https://github.com/fernando-msa/Tradutor-MSA-Extensao/releases)
+[![License](https://img.shields.io/badge/licença-MIT-green)](LICENSE)
 
 ---
 
@@ -38,22 +34,20 @@
 
 ## 📦 Instalação
 
-### Microsoft Edge *(disponível agora)*
+### Microsoft Edge *(disponível)*
+
 1. Acesse a [Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/detail/tradutor-r%C3%A1pido-edge/dkojdeehfjpjphkndhagfbhknnlckami)
-2. Clique em **Obter**
-3. Confirme em **Adicionar extensão**
+2. Clique em **Obter** → **Adicionar extensão**
 
-### Firefox *(em revisão na Mozilla Add-ons Store)*
-> 🦊 A extensão foi submetida à [Firefox Add-ons Store (AMO)](https://addons.mozilla.org) e está aguardando aprovação. Disponibilizaremos o link assim que for aprovada.
+### Firefox *(disponível)*
 
-Enquanto isso, instale manualmente:
-1. Baixe o `.zip` na aba [Releases](https://github.com/fernando-msa/Tradutor-MSA-Extensao/releases)
-2. No Firefox, acesse `about:debugging#/runtime/this-firefox`
-3. Clique em **Carregar extensão temporária**
-4. Selecione qualquer arquivo dentro da pasta descompactada
+1. Acesse a [Firefox Add-ons Store](https://addons.mozilla.org/pt-BR/firefox/addon/tradutor-msa/)
+2. Clique em **Adicionar ao Firefox** → **Adicionar**
 
 ### Chrome *(em breve na store)*
+
 Enquanto não está na Chrome Web Store, instale manualmente:
+
 1. Baixe o `.zip` na aba [Releases](https://github.com/fernando-msa/Tradutor-MSA-Extensao/releases)
 2. Descompacte a pasta
 3. No Chrome, acesse `chrome://extensions/`
@@ -65,21 +59,27 @@ Enquanto não está na Chrome Web Store, instale manualmente:
 ## 🖥️ Como Usar
 
 ### Tradução pelo popup
+
 1. Clique no ícone da extensão na barra do navegador
 2. Digite ou cole o texto no campo esquerdo
 3. Selecione os idiomas de origem e destino
 4. Clique em **Traduzir** ou pressione `Ctrl + Enter`
 
 ### Tradução por voz
+
 1. Clique no ícone do microfone 🎤
 2. Fale normalmente — a extensão detecta e traduz automaticamente
 
+> ⚠️ Reconhecimento de voz não disponível no Firefox (limitação da Web Speech API).
+
 ### Tradução via menu de contexto
+
 1. Selecione qualquer texto em uma página web
 2. Clique com o botão direito
 3. Escolha **Traduzir com MSA**
 
 ### Histórico
+
 - Acesse a aba **Histórico** no popup para ver as últimas 20 traduções
 - Clique em qualquer item para recarregá-lo no tradutor
 
@@ -110,13 +110,14 @@ Tradutor-MSA-Extensao/
 | `contextMenus` | Adicionar opção no menu de botão direito |
 | `storage` | Salvar histórico de traduções e preferências de idioma |
 
-> Nenhum dado é enviado a servidores próprios. A tradução é feita exclusivamente via [MyMemory API](https://mymemory.translated.net/) (gratuita e sem conta).
+> Nenhum dado é enviado a servidores próprios. A tradução é feita exclusivamente via [MyMemory API](https://mymemory.translated.net/) (gratuita e sem cadastro).
 
 ---
 
 ## 🧑‍💻 Desenvolvimento Local
 
 ### Pré-requisitos
+
 - Navegador Edge, Chrome ou Firefox
 - Nenhuma dependência externa — JavaScript puro
 
@@ -126,16 +127,14 @@ Tradutor-MSA-Extensao/
 # 1. Clone o repositório
 git clone https://github.com/fernando-msa/Tradutor-MSA-Extensao.git
 
-# 2. No Edge/Chrome, acesse:
-edge://extensions/   # ou chrome://extensions/
+# Edge / Chrome
+# Acesse edge://extensions/ ou chrome://extensions/
+# Ative o Modo do desenvolvedor
+# Clique em "Carregar sem compactação" → selecione a pasta clonada
 
-# 3. Ative o Modo do desenvolvedor
-
-# 4. Clique em "Carregar sem compactação"
-# Selecione a pasta clonada
-
-# No Firefox:
-# about:debugging#/runtime/this-firefox → Carregar extensão temporária
+# Firefox
+# Acesse about:debugging#/runtime/this-firefox
+# Clique em "Carregar extensão temporária" → selecione qualquer arquivo da pasta
 ```
 
 Qualquer alteração nos arquivos é refletida ao clicar em **Atualizar** na página de extensões.
@@ -147,20 +146,19 @@ Qualquer alteração nos arquivos é refletida ao clicar em **Atualizar** na pá
 | Item | Detalhe |
 |---|---|
 | Limite da API gratuita | MyMemory limita ~5.000 palavras/dia por IP sem chave de API |
-| Voz no Firefox | Reconhecimento de voz não suportado no Firefox (Web Speech API indisponível) |
+| Voz no Firefox | Reconhecimento de voz não suportado (Web Speech API indisponível) |
 | Voz no Chrome | Disponibilidade de vozes varia por sistema operacional |
-| Detecção automática | Textos muito curtos (1-2 palavras) podem ter detecção imprecisa |
+| Detecção automática | Textos muito curtos (1–2 palavras) podem ter detecção imprecisa |
 
 ---
 
 ## 🔧 Melhorias Planejadas
 
-- [ ] Publicação na Firefox Add-ons Store *(em revisão)*
-- [ ] Publicação na Chrome Web Store
-- [ ] Suporte a chave de API MyMemory para aumentar o limite diário
-- [ ] Tradução automática ao selecionar texto (sem abrir popup)
-- [ ] Tema escuro
-- [ ] Atalho de teclado configurável
+- Publicação na Chrome Web Store
+- Suporte a chave de API MyMemory para aumentar o limite diário
+- Tradução automática ao selecionar texto (sem abrir popup)
+- Tema escuro
+- Atalho de teclado configurável
 
 ---
 
@@ -179,7 +177,8 @@ Para reportar bugs ou sugerir funcionalidades, abra uma [Issue](https://github.c
 
 ## 👤 Autor
 
-**Fernando S. De Santana Júnior**  
+**Fernando S. De Santana Júnior**
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fernando-junior-1a74ab29b/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/fernando-msa)
 
@@ -187,4 +186,4 @@ Para reportar bugs ou sugerir funcionalidades, abra uma [Issue](https://github.c
 
 ## 📜 Licença
 
-Distribuído sob licença MIT. Consulte `LICENSE` para mais detalhes.
+Distribuído sob licença [MIT](LICENSE).
